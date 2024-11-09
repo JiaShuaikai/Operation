@@ -1,12 +1,12 @@
 (function () {
-    document.querySelector("body").remove()
-    document.querySelector("head").remove()
 
-    document.querySelector("html").append(document.createElement("head"))
-    document.querySelector("html").append(document.createElement("body"))
+    function init() {
+      document.querySelector("body").remove()
+      document.querySelector("head").remove()
 
-
-    document.querySelector("head").innerHTML = `
+      document.querySelector("html").append(document.createElement("head"))
+      document.querySelector("html").append(document.createElement("body"))
+      document.querySelector("head").innerHTML = `
       <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>注册表单</title>
@@ -100,7 +100,7 @@
   </style>
    `
 
-    document.querySelector("body").innerHTML = `
+      document.querySelector("body").innerHTML = `
       <div class="container">
     <form>
       <fieldset>
@@ -202,6 +202,15 @@
     </form>
   </div>
     `
+    }
+
+
+    setTimeout(() => {
+      init()
+    }, 2000)
+    
+
+    
 
   
 })();
